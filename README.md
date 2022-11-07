@@ -1,9 +1,9 @@
 # Exp-06-Configuration-of-ADC-for-converting-analog-to-digital-signals
 
 
-## Name :	
-## Roll no:
-## Date of experiment : 
+## Name :	SYED MUHAMMED ZAHI
+## Roll no:212221230114
+## Date of experiment : 6/1/2022
   
   
 ## Aim: To configure internal ADC for   LPC2148 ARM 7 and write a code for displaying the values varying from 0v to 3.3v to its equivalent digital values 
@@ -177,6 +177,31 @@ ADxDRy. E.g. AD0DR1 contains ADC result of channel 1 of ADC0.
 Figure -08 Circuit diagram of interfacing an POT with ADC input pin 
 
 ## Kiel - Program 
+~~~
+#include <lpc214x.h>
+#include "LCD.h"
+#include "ADC.h"
+
+unsigned int val;
+int main()
+{
+   IO1DIR = 0xffffffff;
+   IO0DIR = 0x00000000;
+   PINSEL0 = 0x300;
+   VPBDIV = 0x02;
+   lcd_init();
+   show(" ADC Value: ");
+   while(1)
+   {
+   	cmd(0x8b);
+   	val = adc(0,6);
+   	dat((val/1000)+48);
+   	dat(((val/100)%10)+48);
+   	dat(((val/10)%10)+48);
+   	dat((val%10)+48);
+   }
+}
+~~~
  
 ## Tabulations and graph 
 SL NO	% OF POT VALUE	ADC VALUE
