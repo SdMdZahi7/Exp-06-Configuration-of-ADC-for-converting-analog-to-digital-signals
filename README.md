@@ -204,20 +204,9 @@ int main()
 ~~~
  
 ## Tabulations and graph 
-SL NO	% OF POT VALUE	ADC VALUE
-1		
-2		
-3		
-4		
-5		
-6		
-7		
-8		
-9		
-10		
+![image](https://user-images.githubusercontent.com/94187572/200335589-d4d8036d-8f18-4c5a-9ac4-16b436a9fa70.png)
 
- ![image](https://user-images.githubusercontent.com/36288975/198947184-dbccf4b1-10a1-4090-a670-93526ed6e597.png)
-
+![image](https://user-images.githubusercontent.com/94187572/200335538-da6df99c-5367-4a9d-b94d-98510df46d87.png)
 
 
  
